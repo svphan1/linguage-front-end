@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Background from './Components/Background';
+import Background from './Components/Background/Background';
+import ButtonAppBar from './Components/NavBar/NavBar';
 // import './App.css';
 
 class App extends Component {
@@ -7,6 +8,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <Background />
+        <ButtonAppBar />
       </React.Fragment>
     )
   }
