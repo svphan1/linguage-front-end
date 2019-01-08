@@ -1,11 +1,11 @@
 import React from 'react';
-// import image from '../assets/globe-map.png';
-import '../style.css';
+import image from '../../assets/linguage.jpg';
+import './Background.css';
 
 const Background = () => {
   return (
     <React.Fragment>
-      {/* <img src={image2} alt='background image'/> */}
+      <img src={image} alt='background image'/>
     </React.Fragment>
   )
 };

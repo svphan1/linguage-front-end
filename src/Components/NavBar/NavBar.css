@@ -1,10 +1,17 @@
-h6 {
+.app-bar {
+  background-color: rgb(26, 121, 89) !important;
+}
+
+.title {
   font-family: 'Courgette', cursive !important; 
-  font-size: 2rem !important;
-  margin: 0 5% 0 5% !important;
+  font-size: 3rem !important;
+  margin: 0 40vw 0 10vw !important;
+  color: rgb(86, 172, 181) !important;
 }
-/* 
+
 .navbar-tabs {
-  margin-right: 20% !important;
+  color: rgb(86, 172, 181) !important;
 }
- */
+
+
+
