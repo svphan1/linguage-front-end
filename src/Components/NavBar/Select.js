@@ -1,27 +1,27 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
-import Button from '@material-ui/core/Button';
+import React from "react";
+import PropTypes from "prop-types";
+import { withStyles } from "@material-ui/core/styles";
+import InputLabel from "@material-ui/core/InputLabel";
+import MenuItem from "@material-ui/core/MenuItem";
+import FormControl from "@material-ui/core/FormControl";
+import Select from "@material-ui/core/Select";
+import Button from "@material-ui/core/Button";
 
 const styles = theme => ({
   button: {
-    display: 'block',
-    marginTop: theme.spacing.unit * 2,
+    display: "block",
+    marginTop: theme.spacing.unit * 2
   },
   formControl: {
     margin: theme.spacing.unit,
-    minWidth: 120,
-  },
+    minWidth: 120
+  }
 });
 
 class ControlledOpenSelect extends React.Component {
   state = {
-    age: '',
-    open: false,
+    age: "",
+    open: false
   };
 
   handleChange = event => {
@@ -42,7 +42,9 @@ class ControlledOpenSelect extends React.Component {
     return (
       <form autoComplete="off">
         <FormControl className={classes.formControl}>
-          <InputLabel htmlFor="demo-controlled-open-select">Language</InputLabel>
+          <InputLabel htmlFor="demo-controlled-open-select">
+            Language
+          </InputLabel>
           <Select
             open={this.state.open}
             onClose={this.handleClose}
@@ -50,16 +52,19 @@ class ControlledOpenSelect extends React.Component {
             value={this.state.age}
             onChange={this.handleChange}
             inputProps={{
-              name: 'age',
-              id: 'demo-controlled-open-select',
+              name: "age",
+              id: "demo-controlled-open-select"
             }}
           >
-            <MenuItem value="">
-              <em>None</em>
-            </MenuItem>
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
+            <MenuItem value={1}>English</MenuItem>
+            <MenuItem value={2}>Español</MenuItem>
+            <MenuItem value={3}>Deutsch</MenuItem>
+            <MenuItem value={4}>Português Brasileiro</MenuItem>
+            <MenuItem value={5}>French</MenuItem>
+            <MenuItem value={6}>Italian</MenuItem>
+            <MenuItem value={7}>Tiếng Việt</MenuItem>
+            <MenuItem value={8}>中文</MenuItem>
+            <MenuItem value={9}>Dansk</MenuItem>
           </Select>
         </FormControl>
       </form>
@@ -68,7 +73,7 @@ class ControlledOpenSelect extends React.Component {
 }
 
 ControlledOpenSelect.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(ControlledOpenSelect);

@@ -19,7 +19,7 @@ const styles = {
   menuButton: {
     marginLeft: -12,
     marginRight: 20,
-  },
+  }
 };
 
 function ButtonAppBar(props) {
@@ -33,8 +33,8 @@ function ButtonAppBar(props) {
           <Typography variant="h6" color="inherit" className="title">
             Linguage
           </Typography>
-          <Button color="inherit" className="navbar-tabs">Login</Button>
-          <Button color="inherit" className="navbar-tabs">Sign up</Button>
+          <Button className="nav-btn-login">Login</Button>
+          <Button className="nav-btn-signup">Sign up</Button>
           <ControlledOpenSelect />
         </Toolbar>
       </AppBar>
