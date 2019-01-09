@@ -12,7 +12,6 @@ import LockIcon from '@material-ui/icons/LockOutlined';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import withStyles from '@material-ui/core/styles/withStyles';
-import './Login.css';
 
 const styles = theme => ({
   main: {
@@ -36,7 +35,7 @@ const styles = theme => ({
   },
   avatar: {
     margin: theme.spacing.unit,
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: '#ff8c00',
   },
   form: {
     width: '100%', // Fix IE 11 issue.
@@ -44,6 +43,7 @@ const styles = theme => ({
   },
   submit: {
     marginTop: theme.spacing.unit * 3,
+    backgroundColor: '#ff8c00'
   },
 });
 
