@@ -17,6 +17,7 @@ import './Login.css';
 const styles = theme => ({
   main: {
     width: 'auto',
+    position: 'relative',
     display: 'block', // Fix IE 11 issue.
     marginLeft: theme.spacing.unit * 3,
     marginRight: theme.spacing.unit * 3,
