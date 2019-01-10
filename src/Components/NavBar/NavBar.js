@@ -5,10 +5,8 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
-import IconButton from "@material-ui/core/IconButton";
 import ControlledOpenSelect from "./Select";
 import { BrowserRouter as Router, Link } from "react-router-dom";
-import "./NavBar.css";
 
 const styles = {
   root: {
@@ -27,13 +25,25 @@ const styles = {
     backgroundColor: "#56acb5",
     marginLeft: "40vw",
     padding: ".2rem 2rem",
-    borderRadius: "4rem"
+    borderRadius: "4rem",
+    "&:hover": {
+      opacity: 0.9,
+      transform: "scale(1.03)",
+      transition: ".2s ease-out",
+      backgroundColor: "#61ccd8"
+    }
   },
   navSignup: {
     color: "white",
     backgroundColor: "#56acb5",
     padding: ".2rem 1.5rem",
-    borderRadius: "4rem"
+    borderRadius: "4rem",
+    "&:hover": {
+      opacity: 0.9,
+      transform: "scale(1.03)",
+      transition: ".2s ease-out",
+      backgroundColor: "#61ccd8"
+    }
   },
   titleText: {
     fontFamily: ["Courgette"],
@@ -47,7 +57,7 @@ const styles = {
 };
 
 const NavBar = props => {
-  const { classes, changeToLogin } = props;
+  const { classes, showLogin, showSignup } = props;
   return (
     <div className={classes.root}>
       <AppBar position="static" className="app-bar">
@@ -62,11 +72,11 @@ const NavBar = props => {
             </Typography>
           </Link>
           <Link to="/login" className={classes.navLink}>
-            <Button className={classes.navLogin} onClick={changeToLogin}>
+            <Button className={classes.navLogin} onClick={showLogin}>
               Login
             </Button>
           </Link>
-          <Link to="/signup" className={classes.navLink}>
+          <Link to="/signup" className={classes.navLink} onClick={showSignup}>
             <Button className={classes.navSignup}>Sign up</Button>
           </Link>
           <ControlledOpenSelect />

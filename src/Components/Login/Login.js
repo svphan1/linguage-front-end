@@ -12,6 +12,7 @@ import LockIcon from '@material-ui/icons/LockOutlined';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import withStyles from '@material-ui/core/styles/withStyles';
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
 const styles = theme => ({
   main: {
@@ -45,10 +46,13 @@ const styles = theme => ({
     marginTop: theme.spacing.unit * 3,
     backgroundColor: '#ff8c00'
   },
+  loginLink: {
+    textDecoration: 'none'
+  }
 });
 
-function Login(props) {
-  const { classes } = props;
+const Login = (props) => {
+  const { classes, showDashboard } = props;
 
   return (
     <main className={classes.main}>
@@ -73,15 +77,18 @@ function Login(props) {
             control={<Checkbox value="remember" color="primary" />}
             label="Remember me"
           />
+          <Link to="/dashboard" className={classes.loginLink}>
           <Button
             type="submit"
             fullWidth
             variant="contained"
             color="primary"
             className={classes.submit}
+            onClick={showDashboard}
           >
             Login
           </Button>
+          </Link>
         </form>
       </Paper>
     </main>

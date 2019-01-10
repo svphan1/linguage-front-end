@@ -35,7 +35,7 @@ class App extends Component {
           {/* {this.state.isLandingPage && (
             <Button className="btn-started">Get Started</Button>
           )} */}
-          {/* <Button className="btn-started">Get Started</Button> */}
+          <Button className="btn-started">Get Started</Button>
           <Route
             exact
             path="/login"
@@ -46,8 +46,8 @@ class App extends Component {
               />
             )}
           />
-          {/* <Route exact path="/signup" render={() => <SignUp />} /> */}
-          {/* <Route exact path="/dashboard" render={() => <Dashboard />} /> */}
+          <Route exact path="/signup" render={() => <SignUp />} />
+          {this.state.isLandingPage ? null : <Route exact path="/dashboard" render={() => <Dashboard />} />}
           
         </React.Fragment>
       </Router>
