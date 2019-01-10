@@ -30,13 +30,13 @@ class App extends Component {
     return (
       <Router>
         <React.Fragment>
-          <Background />
-          <NavBar showLogin={this.showLogin} showSignUp={this.showSignUp} />
+          {/* <Background />
+          <NavBar showLogin={this.showLogin} showSignUp={this.showSignUp} /> */}
           {/* {this.state.isLandingPage && (
             <Button className="btn-started">Get Started</Button>
           )} */}
           {/* <Button className="btn-started">Get Started</Button> */}
-          <Route
+          {/* <Route
             exact
             path="/login"
             render={() => (
@@ -45,9 +45,9 @@ class App extends Component {
                 showDashboard={this.showDashboard}
               />
             )}
-          />
+          /> */}
           {/* <Route exact path="/signup" render={() => <SignUp />} /> */}
-          {/* <Route exact path="/dashboard" render={() => <Dashboard />} /> */}
+          <Route exact path="/dashboard" render={() => <Dashboard />} />
           
         </React.Fragment>
       </Router>
