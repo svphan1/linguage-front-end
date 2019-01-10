@@ -1,7 +1,6 @@
 # Linguage
 In Progress.
 ### About 
-<br />
 Linguage is a website that will allow language learners to instantly find language exchange partners to practice speaking with. Speaking as we all know is the quickest way to learn a language. Now learners, especially those with busy schedules, will no longer have to spend precious time looking for language partners and schedule tentative sessions. <br />
 ### Use:
 Upon logging in, learners will be presented with the dashboard screen where they can select the language they wish to practice, the language they speak, and broadcoast the request live to the main or specific language channels. Other learners will see the request and if they speak the language you desire and wants to learn your language, they can join for an instant video chat session. 
