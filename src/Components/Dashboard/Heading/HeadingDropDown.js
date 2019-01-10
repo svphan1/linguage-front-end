@@ -33,7 +33,7 @@ const styles = theme => ({
     alignItems: 'center',
   },
   column: {
-    flexBasis: '33.33%',
+    flexBasis: '30%',
   },
   helper: {
     borderLeft: `2px solid ${theme.palette.divider}`,
@@ -55,7 +55,7 @@ function DetailedExpansionPanel(props) {
       <ExpansionPanel defaultExpanded>
         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
           <div className={classes.column}>
-            <Typography className={classes.heading}>Location</Typography>
+            <Typography className={classes.heading}>Preferences</Typography>
           </div>
           <div className={classes.column}>
             <Typography className={classes.secondaryHeading}>Select your language preferences</Typography>

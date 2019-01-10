@@ -6,6 +6,7 @@ import Login from "../Components/Login/Login";
 import SignUp from "../Components/Login/SignUp";
 import Dashboard from "../Components/Dashboard/Dashboard";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import './App.css';
 
 class App extends Component {
   state = {
