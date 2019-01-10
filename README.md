@@ -4,7 +4,7 @@ Linguage is a website that will allow language learners to instantly find langua
 Upon logging in, learners will be presented with the dashboard screen where they can select the language they wish to practice, the language they speak, and broadcoast the request live to the main or specific language channels. Other learners will see the request and if they speak the language you desire and wants to learn your language, they can join for an instant video chat session. 
 Next to the video chat will be a chat box window that will allow learners to type as well as correct each other's grammar. 
 
-### Technologies: 
+### Build: 
 React, JavaScript, Material-UI, CSS3, Node.js, Python, Express, PostgreSQL, Knex. 
 
 Screenshot:
