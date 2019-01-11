@@ -23,12 +23,17 @@ const styles = theme => ({
     flexGrow: 1,
     backgroundColor: "theme.palette.background.paper",
     border: "1px solid #ccc",
+    borderRadius: ".3rem",
     margin: "0 1rem"
   },
   chanHeader: {
     backgroundColor: "darkorange",
     display: 'flex',
-    justifyContent: 'space-evenly'
+    justifyContent: 'space-evenly',
+    borderRadius: ".3rem"
+  },
+  appBar: {
+    borderRadius: ".5rem"
   }
 });
 
@@ -44,10 +49,10 @@ class ChannelBox extends React.Component {
   render() {
     const { classes } = this.props;
     const { value } = this.state;
-
+//map here
     return (
       <div className={classes.root}>
-        <AppBar position="static">
+        <AppBar position="static" className={classes.appBar}>
           <Tabs
             value={value}
             onChange={this.handleChange}

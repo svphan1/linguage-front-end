@@ -1,35 +1,33 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
-import InputBase from '@material-ui/core/InputBase';
-import Badge from '@material-ui/core/Badge';
-import MenuItem from '@material-ui/core/MenuItem';
-import Menu from '@material-ui/core/Menu';
-import { fade } from '@material-ui/core/styles/colorManipulator';
-import { withStyles } from '@material-ui/core/styles';
-import MenuIcon from '@material-ui/icons/Menu';
-import AccountCircle from '@material-ui/icons/AccountCircle';
-import MailIcon from '@material-ui/icons/Mail';
-import NotificationsIcon from '@material-ui/icons/Notifications';
-import MoreIcon from '@material-ui/icons/MoreVert';
+import React from "react";
+import PropTypes from "prop-types";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import IconButton from "@material-ui/core/IconButton";
+import Typography from "@material-ui/core/Typography";
+import Badge from "@material-ui/core/Badge";
+import MenuItem from "@material-ui/core/MenuItem";
+import Menu from "@material-ui/core/Menu";
+import { withStyles } from "@material-ui/core/styles";
+import MenuIcon from "@material-ui/icons/Menu";
+import AccountCircle from "@material-ui/icons/AccountCircle";
+import MailIcon from "@material-ui/icons/Mail";
+import NotificationsIcon from "@material-ui/icons/Notifications";
+import MoreIcon from "@material-ui/icons/MoreVert";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
 const styles = theme => ({
   root: {
-    width: '100%',
+    width: "100%"
   },
   grow: {
-    flexGrow: 1,
+    flexGrow: 1
   },
   appBar: {
     backgroundColor: "#56acb5"
   },
   menuButton: {
     marginLeft: -12,
-    marginRight: 20,
+    marginRight: 20
   },
   title: {
     fontFamily: ["Courgette"],
@@ -38,23 +36,26 @@ const styles = theme => ({
     color: "white"
   },
   sectionDesktop: {
-    display: 'none',
-    [theme.breakpoints.up('md')]: {
-      display: 'flex',
-    },
+    display: "none",
+    [theme.breakpoints.up("md")]: {
+      display: "flex"
+    }
   },
   sectionMobile: {
-    display: 'flex',
-    [theme.breakpoints.up('md')]: {
-      display: 'none',
-    },
+    display: "flex",
+    [theme.breakpoints.up("md")]: {
+      display: "none"
+    }
   },
+  titleLink: {
+    textDecoration: "none"
+  }
 });
 
 class DashNavBar extends React.Component {
   state = {
     anchorEl: null,
-    mobileMoreAnchorEl: null,
+    mobileMoreAnchorEl: null
   };
 
   handleProfileMenuOpen = event => {
@@ -76,15 +77,15 @@ class DashNavBar extends React.Component {
 
   render() {
     const { anchorEl, mobileMoreAnchorEl } = this.state;
-    const { classes } = this.props;
+    const { classes, hideDashboard } = this.props;
     const isMenuOpen = Boolean(anchorEl);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
     const renderMenu = (
       <Menu
         anchorEl={anchorEl}
-        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-        transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+        transformOrigin={{ vertical: "top", horizontal: "right" }}
         open={isMenuOpen}
         onClose={this.handleMenuClose}
       >
@@ -96,8 +97,8 @@ class DashNavBar extends React.Component {
     const renderMobileMenu = (
       <Menu
         anchorEl={mobileMoreAnchorEl}
-        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-        transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+        transformOrigin={{ vertical: "top", horizontal: "right" }}
         open={isMobileMenuOpen}
         onClose={this.handleMobileMenuClose}
       >
@@ -130,12 +131,23 @@ class DashNavBar extends React.Component {
       <div className={classes.root}>
         <AppBar position="static" className={classes.appBar}>
           <Toolbar>
-            <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
+            <IconButton
+              className={classes.menuButton}
+              color="inherit"
+              aria-label="Open drawer"
+            >
               <MenuIcon />
             </IconButton>
-            <Typography className={classes.title} variant="h6" color="inherit" noWrap>
-              Linguage
-            </Typography>
+            <Link to="/" className={classes.titleLink} onClick={hideDashboard}>
+              <Typography
+                className={classes.title}
+                variant="h6"
+                color="inherit"
+                noWrap
+              >
+                Linguage
+              </Typography>
+            </Link>
             <div className={classes.grow} />
             <div className={classes.sectionDesktop}>
               <IconButton color="inherit">
@@ -149,7 +161,7 @@ class DashNavBar extends React.Component {
                 </Badge>
               </IconButton>
               <IconButton
-                aria-owns={isMenuOpen ? 'material-appbar' : undefined}
+                aria-owns={isMenuOpen ? "material-appbar" : undefined}
                 aria-haspopup="true"
                 onClick={this.handleProfileMenuOpen}
                 color="inherit"
@@ -158,7 +170,11 @@ class DashNavBar extends React.Component {
               </IconButton>
             </div>
             <div className={classes.sectionMobile}>
-              <IconButton aria-haspopup="true" onClick={this.handleMobileMenuOpen} color="inherit">
+              <IconButton
+                aria-haspopup="true"
+                onClick={this.handleMobileMenuOpen}
+                color="inherit"
+              >
                 <MoreIcon />
               </IconButton>
             </div>
@@ -172,7 +188,7 @@ class DashNavBar extends React.Component {
 }
 
 DashNavBar.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(DashNavBar);

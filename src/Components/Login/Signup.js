@@ -53,7 +53,7 @@ const styles = theme => ({
 });
 
 function SignUp(props) {
-  const { classes } = props;
+  const { classes, showDashboard } = props;
 
   return (
     <main className={classes.main}>
@@ -89,6 +89,7 @@ function SignUp(props) {
             variant="contained"
             color="primary"
             className={classes.submit}
+            onClick={showDashboard}
           >
             Sign up
           </Button>

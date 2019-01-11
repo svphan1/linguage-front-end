@@ -19,12 +19,13 @@ const styles = theme => ({
 
 class ControlledOpenSelect extends React.Component {
   state = {
-    age: "",
+    language: "",
     open: false
   };
 
   handleChange = event => {
     this.setState({ [event.target.name]: event.target.value });
+    console.log("language", this.state.language)
   };
 
   handleClose = () => {
@@ -48,22 +49,23 @@ class ControlledOpenSelect extends React.Component {
             open={this.state.open}
             onClose={this.handleClose}
             onOpen={this.handleOpen}
-            value={this.state.age}
+            value={this.state.language}
             onChange={this.handleChange}
             inputProps={{
-              name: "age",
+              name: "language",
               id: "demo-controlled-open-select"
             }}
           >
-            <MenuItem value={1}>English</MenuItem>
-            <MenuItem value={2}>Español</MenuItem>
-            <MenuItem value={3}>Deutsch</MenuItem>
-            <MenuItem value={4}>Português Brasileiro</MenuItem>
-            <MenuItem value={5}>French</MenuItem>
-            <MenuItem value={6}>Italian</MenuItem>
-            <MenuItem value={7}>Tiếng Việt</MenuItem>
-            <MenuItem value={8}>中文</MenuItem>
-            <MenuItem value={9}>Dansk</MenuItem>
+            <MenuItem value={'English'}>English</MenuItem>
+            <MenuItem value={'Spanish'}>Spanish</MenuItem>
+            <MenuItem value={'German'}>German</MenuItem>
+            <MenuItem value={'Portuguese'}>Portuguese</MenuItem>
+            <MenuItem value={'French'}>French</MenuItem>
+            <MenuItem value={'Italian'}>Italian</MenuItem>
+            <MenuItem value={'Vietnamese'}>Vietnamese</MenuItem>
+            <MenuItem value={'Mandarin'}>Mandarin</MenuItem>
+            <MenuItem value={'Cantonese'}>Cantonese</MenuItem>
+            <MenuItem value={'Japanese'}>Japanese</MenuItem>
           </Select>
         </FormControl>
       </form>

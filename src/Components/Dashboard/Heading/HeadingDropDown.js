@@ -8,10 +8,10 @@ import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelActions from '@material-ui/core/ExpansionPanelActions';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import Chip from '@material-ui/core/Chip';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
-import HeadingSelect from './HeadingSelect';
+import LanguageSelect from './LanguageSelect';
+import ChannelSelect from './ChannelSelect';
 
 const styles = theme => ({
   root: {
@@ -49,8 +49,9 @@ const styles = theme => ({
 });
 
 function DetailedExpansionPanel(props) {
-  const { classes } = props;
+  const { classes, postRequest } = props;
   return (
+    <form onSubmit={postRequest}>
     <div className={classes.root}>
       <ExpansionPanel defaultExpanded>
         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
@@ -66,25 +67,31 @@ function DetailedExpansionPanel(props) {
           <div className={classes.column}>
           <Typography variant="caption">
               Learning:
-              <HeadingSelect />
+              <LanguageSelect />
             </Typography>
           </div>
           <div className={classNames(classes.column, classes.helper)}>
             <Typography variant="caption">
               Select your spoken language:
-              <HeadingSelect />
+              <LanguageSelect />
+            </Typography>
+          </div>
+          <div className={classNames(classes.column, classes.helper)}>
+            <Typography variant="caption">
+              Post to
+              <ChannelSelect postRequest={postRequest}/>
             </Typography>
           </div>
         </ExpansionPanelDetails>
         <Divider />
         <ExpansionPanelActions>
-          <Button size="small">Cancel</Button>
           <Button size="small" color="primary">
             Post
           </Button>
         </ExpansionPanelActions>
       </ExpansionPanel>
     </div>
+    </form>
   );
 }
 

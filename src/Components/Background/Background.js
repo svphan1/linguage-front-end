@@ -2,6 +2,7 @@ import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import image from "../../assets/linguage.jpg";
 import Button from "@material-ui/core/Button";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
 const styles = {
   background: {
@@ -32,9 +33,11 @@ const Background = props => {
   return (
     <React.Fragment>
       <img src={image} alt="background image" className={classes.background} />
-      <Button className="btn-started" className={classes.startBtn}>
-        Get Started
-      </Button>
+      <Link to="/login">
+        <Button className="btn-started" className={classes.startBtn}>
+          Get Started
+        </Button>
+      </Link>
     </React.Fragment>
   );
 };

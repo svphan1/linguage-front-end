@@ -20,11 +20,19 @@ const styles = theme => ({
 });
 
 class Dashboard extends Component {
+
+  // make state 
+  componentDidMount() {
+    this.props.showDashboard();
+    //fetch request
+  }
+
+
   render() {
-    const { classes } = this.props;
+    const { classes, hideDashboard } = this.props;
     return (
       <React.Fragment>
-        <DashNavBar />
+        <DashNavBar hideDashboard={hideDashboard}/>
         <HeadingDropDown />
         <Grid container>
           <Grid item sm={4} xs={12} className="hideMobile">
