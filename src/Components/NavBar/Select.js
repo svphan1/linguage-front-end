@@ -14,10 +14,14 @@ const styles = theme => ({
   formControl: {
     margin: theme.spacing.unit,
     minWidth: 120
+  },
+  typography: {
+    fontFamily: ["Nunito"],
+    fontWeight: "bold",
   }
 });
 
-class ControlledOpenSelect extends React.Component {
+class HomeLanguageSelect extends React.Component {
   state = {
     age: "",
     open: false
@@ -41,7 +45,7 @@ class ControlledOpenSelect extends React.Component {
     return (
       <form autoComplete="off">
         <FormControl className={classes.formControl}>
-          <InputLabel htmlFor="demo-controlled-open-select">
+          <InputLabel htmlFor="demo-controlled-open-select" className={classes.typography}>
             Language
           </InputLabel>
           <Select
@@ -71,8 +75,8 @@ class ControlledOpenSelect extends React.Component {
   }
 }
 
-ControlledOpenSelect.propTypes = {
+HomeLanguageSelect.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(ControlledOpenSelect);
+export default withStyles(styles)(HomeLanguageSelect);

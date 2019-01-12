@@ -13,7 +13,8 @@ import image from '../../../assets/profile.png';
 const styles = {
   card: {
     maxWidth: 200,
-    margin: '3rem 0 0 10rem'
+    margin: '3rem 0 0 10rem',
+    boxShadow: " 3px 3px 5px .5px rgba(0, 0, 0, 0.4)"
   },
   media: {
     height: '14rem',

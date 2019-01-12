@@ -25,7 +25,8 @@ const styles = theme => ({
     backgroundColor: "theme.palette.background.paper",
     border: "1px solid #ccc",
     borderRadius: ".3rem",
-    margin: "0 1rem"
+    margin: "0 1rem",
+    boxShadow: " 2px 6px 10px 0.5px rgba(0, 0, 0, 0.4)"
   },
   chanHeader: {
     backgroundColor: "darkorange",

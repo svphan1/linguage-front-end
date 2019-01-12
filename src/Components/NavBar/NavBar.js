@@ -5,7 +5,7 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
-import ControlledOpenSelect from "./Select";
+import HomeLanguageSelect from "./Select";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
 const styles = {
@@ -26,6 +26,8 @@ const styles = {
     marginLeft: "40vw",
     padding: ".2rem 2rem",
     borderRadius: "4rem",
+    fontFamily: ["Nunito"],
+    fontWeight: "bold",
     "&:hover": {
       opacity: 0.9,
       transform: "scale(1.03)",
@@ -38,6 +40,8 @@ const styles = {
     backgroundColor: "#56acb5",
     padding: ".2rem 1.5rem",
     borderRadius: "4rem",
+    fontFamily: ["Nunito"],
+    fontWeight: "bold",
     "&:hover": {
       opacity: 0.9,
       transform: "scale(1.03)",
@@ -79,7 +83,7 @@ const NavBar = props => {
           <Link to="/signup" className={classes.navLink} onClick={showSignup}>
             <Button className={classes.navSignup}>Sign up</Button>
           </Link>
-          <ControlledOpenSelect />
+          <HomeLanguageSelect />
         </Toolbar>
       </AppBar>
     </div>

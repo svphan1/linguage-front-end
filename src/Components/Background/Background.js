@@ -3,6 +3,7 @@ import { withStyles } from "@material-ui/core/styles";
 import image from "../../assets/linguage.jpg";
 import Button from "@material-ui/core/Button";
 import { BrowserRouter as Router, Link } from "react-router-dom";
+import "./Background.css";
 
 const styles = {
   background: {
@@ -19,12 +20,16 @@ const styles = {
     padding: ".5rem 6rem",
     borderRadius: "4rem",
     backgroundColor: "darkorange",
+    fontFamily: ["Nunito"],
+    fontWeight: "bold",
     "&:hover": {
       opacity: 0.9,
       transform: "scale(1.03)",
       transition: ".2s ease-out",
       backgroundColor: "#61ccd8"
-    }
+    },
+    animation: "moveInBottom .5s ease-out 0.75s",
+    animationFillMode: "backwards"
   }
 };
 

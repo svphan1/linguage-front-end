@@ -42,9 +42,13 @@ const styles = theme => ({
     width: '100%', // Fix IE 11 issue.
     marginTop: theme.spacing.unit,
   },
-  submit: {
+  login: {
     marginTop: theme.spacing.unit * 3,
-    backgroundColor: '#ff8c00'
+    backgroundColor: '#ff8c00',
+    "&:hover": {
+      opacity: 0.9,
+      backgroundColor: "#61ccd8"
+    }
   },
   loginLink: {
     textDecoration: 'none'
@@ -83,7 +87,7 @@ const Login = (props) => {
             fullWidth
             variant="contained"
             color="primary"
-            className={classes.submit}
+            className={classes.login}
             onClick={showDashboard}
           >
             Login
