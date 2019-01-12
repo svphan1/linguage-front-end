@@ -16,8 +16,14 @@ const styles = {
     margin: '3rem 0 0 10rem'
   },
   media: {
-    height: '11rem',
+    height: '14rem',
   },
+  button: {
+    justifyContent: "center"
+  },
+  typography: {
+    textAlign: "center"
+  }
 };
 
 function MediaCard(props) {
@@ -31,15 +37,16 @@ function MediaCard(props) {
           title="Contemplative Reptile"
         />
         <CardContent>
-          <Typography gutterBottom variant="h6" component="h2">
+          <Typography gutterBottom variant="h6" component="h2" className={classes.typography}>
             Son Phan
           </Typography>
           <Typography component="p">
-            Son Phans are a widespread group of squamate reptiles.
+            Currently learning: French
+            Speaks: English, Vietnamese, Spanish
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
+      <CardActions className={classes.button}>
         <Button size="small" color="primary">
           View Profile
         </Button>

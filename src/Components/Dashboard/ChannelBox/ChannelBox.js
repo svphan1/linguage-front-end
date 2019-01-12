@@ -5,6 +5,7 @@ import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
+import "./ChannelBox.css";
 
 const TabContainer = props => {
   return (
@@ -58,7 +59,7 @@ class ChannelBox extends React.Component {
             onChange={this.handleChange}
             className={classes.chanHeader}
           >
-            <Tab value="one" label="Main Channel" className={classes.tabs}/>
+            <Tab value="one" label="Main Channel"/>
             <Tab value="two" label="Spanish Channel" />
             <Tab value="three" label="French Channel" />
           </Tabs>

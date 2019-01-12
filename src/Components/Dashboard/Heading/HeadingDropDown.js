@@ -48,12 +48,12 @@ const styles = theme => ({
   },
 });
 
-function DetailedExpansionPanel(props) {
+const DetailedExpansionPanel = (props) => {
   const { classes, postRequest } = props;
   return (
     <form onSubmit={postRequest}>
     <div className={classes.root}>
-      <ExpansionPanel defaultExpanded>
+      <ExpansionPanel>
         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
           <div className={classes.column}>
             <Typography className={classes.heading}>Preferences</Typography>

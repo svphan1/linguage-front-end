@@ -49,6 +49,9 @@ const styles = theme => ({
   },
   titleLink: {
     textDecoration: "none"
+  },
+  badge: {
+    backgroundColor: "orangered"
   }
 });
 
@@ -104,7 +107,7 @@ class DashNavBar extends React.Component {
       >
         <MenuItem>
           <IconButton color="inherit">
-            <Badge badgeContent={4} color="secondary">
+            <Badge badgeContent={4} className={classes.badge}>
               <MailIcon />
             </Badge>
           </IconButton>
@@ -112,7 +115,7 @@ class DashNavBar extends React.Component {
         </MenuItem>
         <MenuItem>
           <IconButton color="inherit">
-            <Badge badgeContent={11} color="secondary">
+            <Badge badgeContent={11} className={classes.badge}>
               <NotificationsIcon />
             </Badge>
           </IconButton>
