@@ -7,7 +7,7 @@ Upon logging in, learners will be presented with the dashboard screen where they
 Next to the video chat will be a chat box window that will allow learners to type as well as correct each other's grammar. 
 
 ### Build: 
-React, JavaScript, Material-UI, CSS3, Node.js, Python, Express, PostgreSQL, Knex. 
+React, JavaScript, Material-UI, CSS3, Node.js, Python, Express, PostgreSQL, Knex, WebRTC 
 
 Screenshot:
 <img width="1440" alt="screen shot 2019-01-10 at 10 49 28" src="https://user-images.githubusercontent.com/36240410/50986975-81c82080-14c5-11e9-8e8d-0724aa1e960a.png">
