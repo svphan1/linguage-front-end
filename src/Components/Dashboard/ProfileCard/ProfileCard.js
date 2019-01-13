@@ -26,7 +26,9 @@ const styles = {
     justifyContent: "center"
   },
   typography: {
-    textAlign: "center"
+    textAlign: "center",
+    fontFamily: ["Nunito"],
+    fontWeight: "bold"
   }
 };
 
@@ -44,7 +46,7 @@ function MediaCard(props) {
           <Typography gutterBottom variant="h6" component="h2" className={classes.typography}>
             svphan
           </Typography>
-          <Typography component="p">
+          <Typography component="p" className={classes.typography}>
             Currently learning: French
             Speaks: English, Vietnamese, Spanish
           </Typography>
@@ -54,9 +56,6 @@ function MediaCard(props) {
         <Button size="small" color="primary">
           View Profile
         </Button>
-        {/* <Button size="small" color="primary">
-          Learn More
-        </Button> */}
       </CardActions>
     </Card>
   );

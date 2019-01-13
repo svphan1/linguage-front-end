@@ -38,11 +38,12 @@ const styles = theme => ({
     fontWeight: "bold",
     fontSize: "1rem"
   },
-  postStyle: {
+  btnStyle: {
     fontFamily: ["Nunito"],
     fontWeight: "bold",
-    fontSize: "1rem",
+    fontSize: ".9rem",
     color: "white",
+    borderRadius: "2rem",
     backgroundColor: "#56acb5",
     "&:hover": {
       opacity: 0.9,
@@ -50,7 +51,7 @@ const styles = theme => ({
     }
   },
   postMargin: {
-    margin: "-.6rem 10rem"
+    margin: "-.2rem 6rem"
   },
   icon: {
     verticalAlign: "bottom",
@@ -115,8 +116,11 @@ const DetailedExpansionPanel = props => {
           </ExpansionPanelDetails>
           <Divider />
           <ExpansionPanelActions className={classes.postMargin}>
-            <Button size="small" color="primary" className={classes.postStyle}>
+            <Button size="small" color="primary" className={classes.btnStyle}>
               Post
+            </Button>
+            <Button size="small" color="primary" className={classes.btnStyle}>
+              Add Channel
             </Button>
           </ExpansionPanelActions>
         </ExpansionPanel>
