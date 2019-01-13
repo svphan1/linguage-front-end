@@ -21,11 +21,14 @@ const styles = theme => ({
     fontSize: theme.typography.pxToRem(15),
     fontFamily: ["Nunito"],
     fontWeight: "bold",
-    fontSize: "1.3rem"
+    fontSize: "1.3rem",
+    margin: "0 1rem 0 11rem"
   },
   secondaryHeading: {
     fontSize: theme.typography.pxToRem(15),
     color: theme.palette.text.secondary,
+    display: "flex",
+    justifyContent: "flex-end",
     fontFamily: ["Nunito"],
     fontWeight: "bold",
     fontSize: "1.1rem"
@@ -81,7 +84,7 @@ const DetailedExpansionPanel = props => {
         <ExpansionPanel>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
             <div className={classes.column}>
-              <Typography className={classes.heading}>Broadcast</Typography>
+              <Typography className={classes.heading}>Broadcast:</Typography>
             </div>
             <div className={classes.column}>
               <Typography className={classes.secondaryHeading}>

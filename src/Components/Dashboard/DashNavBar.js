@@ -25,10 +25,6 @@ const styles = theme => ({
   appBar: {
     backgroundColor: "#56acb5"
   },
-  menuButton: {
-    marginLeft: -12,
-    marginRight: 20
-  },
   title: {
     fontFamily: ["Courgette"],
     fontSize: "3rem",
@@ -134,13 +130,6 @@ class DashNavBar extends React.Component {
       <div className={classes.root}>
         <AppBar position="static" className={classes.appBar}>
           <Toolbar>
-            <IconButton
-              className={classes.menuButton}
-              color="inherit"
-              aria-label="Open drawer"
-            >
-              <MenuIcon />
-            </IconButton>
             <Link to="/" className={classes.titleLink} onClick={hideDashboard}>
               <Typography
                 className={classes.title}

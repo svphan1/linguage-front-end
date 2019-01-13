@@ -6,6 +6,10 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import "./ChannelBox.css";
+import MainChannelRequest from "./MainChannelRequest";
+import MainChannelSeed from "./MainChannelSeed";
+import MainChannelSeed2 from "./MainChannelSeed2";
+
 
 const TabContainer = props => {
   return (
@@ -26,7 +30,7 @@ const styles = theme => ({
     border: "1px solid #ccc",
     borderRadius: ".3rem",
     margin: "0 1rem",
-    boxShadow: " 2px 6px 10px 0.5px rgba(0, 0, 0, 0.4)"
+    boxShadow: " 2px 2px 6px 0.5px rgba(0, 0, 0, 0.4)"
   },
   chanHeader: {
     backgroundColor: "darkorange",
@@ -65,9 +69,11 @@ class ChannelBox extends React.Component {
             <Tab value="three" label="French Channel" />
           </Tabs>
         </AppBar>
-        {value === "one" && <TabContainer>Item One</TabContainer>}
-        {value === "two" && <TabContainer>Item Two</TabContainer>}
-        {value === "three" && <TabContainer>Item Three</TabContainer>}
+        {value === "one" && <MainChannelSeed2 />}
+        {value === "one" && <MainChannelSeed />}
+        {value === "one" && <MainChannelRequest />}
+        {value === "two" && <MainChannelSeed2 />}
+        {value === "three" && <MainChannelSeed2 />}
       </div>
     );
   }

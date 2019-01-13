@@ -14,10 +14,13 @@ const styles = {
   card: {
     maxWidth: 200,
     margin: '3rem 0 0 10rem',
-    boxShadow: " 3px 3px 5px .5px rgba(0, 0, 0, 0.4)"
+    boxShadow: " 2px 2px 6px 0.5px rgba(0, 0, 0, 0.4)"
   },
   media: {
     height: '14rem',
+    borderRadius: "5px",
+    margin: "5px",
+    border: "1px solid #ccc"
   },
   button: {
     justifyContent: "center"
@@ -39,7 +42,7 @@ function MediaCard(props) {
         />
         <CardContent>
           <Typography gutterBottom variant="h6" component="h2" className={classes.typography}>
-            Son Phan
+            svphan
           </Typography>
           <Typography component="p">
             Currently learning: French
