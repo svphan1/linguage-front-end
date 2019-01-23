@@ -10,5 +10,6 @@ Next to the video chat will be a chat box window that will allow learners to typ
 React, JavaScript, Material-UI, CSS3, Node.js, Python, Express, PostgreSQL, Knex, WebRTC 
 
 Screenshot:
-![Alt Text](https://imgur.com/a/Vr7Kffv.gif)
-<img width="1440" alt="screen shot 2019-01-10 at 10 49 28" src="https://user-images.githubusercontent.com/36240410/50986975-81c82080-14c5-11e9-8e8d-0724aa1e960a.png">
+<img width="1436" alt="screen shot 2019-01-23 at 11 52 17" src="https://user-images.githubusercontent.com/36240410/51629766-a4b2f580-1f05-11e9-8ae3-ff34b5a7536d.png">
+<img width="1437" alt="screen shot 2019-01-23 at 11 52 43" src="https://user-images.githubusercontent.com/36240410/51629771-a67cb900-1f05-11e9-9349-6a4d0744edf2.png">
+<img width="1439" alt="screen shot 2019-01-23 at 11 54 06" src="https://user-images.githubusercontent.com/36240410/51629772-a7ade600-1f05-11e9-8cea-eea6d40cdfb7.png">
