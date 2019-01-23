@@ -17,7 +17,11 @@ const styles = theme => ({
     borderRadius: "2rem",
     width: "80%",
     backgroundColor: "white",
-    marginTop: "1.5rem"
+    marginTop: "1.5rem",
+    "&:hover": {
+      transform: "scale(1.015)",
+      transition: "all .2s"
+    }
   },
   toolBar: {
     display: "flex",
@@ -53,7 +57,7 @@ const MainChannelRequest = props => {
         <Toolbar className={classes.toolBar}>
           <Chip
             avatar={<Avatar alt="user photo" src={image} />}
-            label="lars16"
+            label="ryanGosling"
             className={classes.chip}
             variant="outlined"
           />
@@ -64,7 +68,7 @@ const MainChannelRequest = props => {
             color="primary"
           />
           <Chip
-            label="Waiting..."
+            label="Join"
             className={classes.chip}
             variant="outlined"
             color="primary"

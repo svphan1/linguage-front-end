@@ -21,7 +21,11 @@ const styles = theme => ({
   },
   toolBar: {
     display: "flex",
-    justifyContent: "space-around"
+    justifyContent: "space-around",
+    "&:hover": {
+      transform: "scale(1.015)",
+      transition: "all .2s"
+    }
   },
   typography: {
     fontFamily: ["Nunito"],
@@ -53,7 +57,7 @@ const MainChannelSeed = props => {
         <Toolbar className={classes.toolBar}>
           <Chip
             avatar={<Avatar alt="user photo" src={image} />}
-            label="rockSpock"
+            label="spock"
             className={classes.chip}
             variant="outlined"
           />
@@ -64,7 +68,7 @@ const MainChannelSeed = props => {
             color="primary"
           />
           <Chip
-            label="Waiting..."
+            label="Join"
             className={classes.chip}
             variant="outlined"
             color="primary"

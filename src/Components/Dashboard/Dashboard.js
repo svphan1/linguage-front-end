@@ -12,7 +12,7 @@ const styles = theme => ({
   chanBox: {
     display: "flex"
   },
-  random: {
+  subChanBox: {
     display: "flex",
     width: "100%",
     marginTop: "3rem"
@@ -20,30 +20,28 @@ const styles = theme => ({
 });
 
 class Dashboard extends Component {
-
-  // make state 
+    // create state
   componentDidMount() {
     this.props.showDashboard();
     //fetch request
   }
 
-
   render() {
     const { classes, hideDashboard } = this.props;
     return (
       <React.Fragment>
-        <DashNavBar hideDashboard={hideDashboard}/>
+        <DashNavBar hideDashboard={hideDashboard} />
         <HeadingDropDown />
-        <Grid container>
+        {/* <Grid container>
           <Grid item sm={4} xs={12} className="hideMobile">
             <ProfileCard />
           </Grid>
           <Grid item sm={8} xs={12} className={classes.chanBox}>
-            <div className={classes.random}>
+            <div className={classes.subChanBox}>
               <ChannelBox />
             </div>
           </Grid>
-        </Grid>
+        </Grid> */}
       </React.Fragment>
     );
   }

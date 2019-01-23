@@ -10,11 +10,9 @@ import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Button from "@material-ui/core/Button";
 import Divider from "@material-ui/core/Divider";
-import Grid from "@material-ui/core/Grid";
 import LanguageSelect from "./LanguageSelect";
 import ChannelSelect from "./ChannelSelect";
 import ChannelBox from "../ChannelBox/ChannelBox";
-import ProfileCard from "../ProfileCard/ProfileCard";
 
 const styles = theme => ({
   root: {
@@ -78,21 +76,10 @@ const styles = theme => ({
   }
 });
 
-class DetailedExpansionPanel extends React.Component {
-  state = {
-    posted: false
-  };
-
-  postRequest = () => {
-    this.setState({ posted: true });
-    console.log("posted");
-  };
-
-  render() {
-    const { classes, postRequest } = this.props;
-    const passedState = this.state.posted;
-    const hidden = true;
-    return (
+const DetailedExpansionPanel = props => {
+  const { classes, postRequest } = props;
+  const hideChannelBox = true;
+  return (
       <div className={classes.root}>
         <ExpansionPanel>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
@@ -128,30 +115,18 @@ class DetailedExpansionPanel extends React.Component {
           </ExpansionPanelDetails>
           <Divider />
           <ExpansionPanelActions className={classes.postMargin}>
-            <Button
-              size="small"
-              color="primary"
-              className={classes.btnStyle}
-              onClick={this.postRequest}
-            >
+            <Button size="small" color="primary" className={classes.btnStyle} onClick={postRequest}>
               Post
             </Button>
             <Button size="small" color="primary" className={classes.btnStyle}>
               Add Channel
+              {hideChannelBox ? null : <ChannelBox postRequest={postRequest}/>}
             </Button>
           </ExpansionPanelActions>
         </ExpansionPanel>
-        {/* To be removed */}
-        <Grid container>
-          <Grid item sm={4} xs={12} className="hideMobile">
-            <ProfileCard />
-          </Grid>
-        </Grid>
-        <ChannelBox passedState={passedState} />
       </div>
-    );
-  }
-}
+  );
+};
 
 DetailedExpansionPanel.propTypes = {
   classes: PropTypes.object.isRequired

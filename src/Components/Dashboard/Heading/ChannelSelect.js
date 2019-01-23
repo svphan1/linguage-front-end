@@ -22,7 +22,6 @@ class ControlledOpenSelect extends React.Component {
 
   handleChange = event => {
     this.setState({ [event.target.name]: event.target.value });
-    console.log('channel', this.state.channel)
   };
 
   handleClose = () => {
@@ -31,10 +30,6 @@ class ControlledOpenSelect extends React.Component {
 
   handleOpen = () => {
     this.setState({ open: true });
-  };
-
-  postRequest = () => {
-    console.log("posted bihhh")
   };
 
   render() {

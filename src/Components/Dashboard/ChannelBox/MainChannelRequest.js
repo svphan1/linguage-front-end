@@ -17,7 +17,11 @@ const styles = theme => ({
     borderRadius: "2rem",
     width: "80%",
     backgroundColor: "white",
-    marginTop: "1.5rem"
+    marginTop: "1.5rem",
+    "&:hover": {
+      transform: "scale(1.015)",
+      transition: "all .2s"
+    }
   },
   toolBar: {
     display: "flex",
@@ -58,7 +62,7 @@ const MainChannelRequest = props => {
             variant="outlined"
           />
           <Chip
-            label="Italian"
+            label="Spanish"
             className={classes.chip}
             variant="outlined"
             color="primary"

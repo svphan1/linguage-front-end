@@ -12,7 +12,7 @@ import image from '../../../assets/profile.png';
 
 const styles = {
   card: {
-    maxWidth: 200,
+    maxWidth: 250,
     margin: '3rem 0 0 10rem',
     boxShadow: " 2px 2px 6px 0.5px rgba(0, 0, 0, 0.4)"
   },
@@ -47,8 +47,8 @@ function MediaCard(props) {
             svphan
           </Typography>
           <Typography component="p" className={classes.typography}>
-            Currently learning: French
-            Speaks: English, Vietnamese, Spanish
+            Currently learning: Spanish
+            Speaks: English, French, Spanish
           </Typography>
         </CardContent>
       </CardActionArea>

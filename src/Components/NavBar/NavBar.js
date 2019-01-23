@@ -6,6 +6,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import HomeLanguageSelect from "./Select";
+import "../Background/Background.css";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
 const styles = {
@@ -53,7 +54,9 @@ const styles = {
     fontFamily: ["Courgette"],
     fontSize: "3.5rem",
     margin: "0 0 0 10vw",
-    color: "#56acb5"
+    color: "#56acb5",
+    animation: "moveInBottom .5s ease-out 0.75s",
+    animationFillMode: "backwards"
   },
   titleLink: {
     textDecoration: "none"
