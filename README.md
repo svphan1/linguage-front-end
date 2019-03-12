@@ -9,10 +9,10 @@ Next to the video chat will be a chat box window that will allow learners to typ
 ### Web chat demo:
 [Demo](https://webrtc-linguage-qdvruywwki.now.sh/) <br/>
 Current usage until website is complete: <br/>
-1. Create a chatroom
-2. Send link to another user
-3. Other user needs to input the same chat room name
-4. Connect
+1. Create a chatroom.
+2. Send link to another user.
+3. Other user needs to input the same chat room name.
+4. Practice speaking!
 
 ### Build: 
 React, JavaScript, Material-UI, CSS3, Node.js, Python, Express, PostgreSQL, Knex, WebRTC 
