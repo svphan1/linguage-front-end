@@ -1,10 +1,18 @@
 # Linguage
-In Progress.
+In Progress - user interface is being reworked.
 ### About 
 Linguage is a website that will allow language learners to instantly find language exchange partners to practice speaking with. Speaking as we all know is the quickest way to learn a language. Now learners, especially those with busy schedules, will no longer have to spend precious time looking for language partners and schedule tentative sessions. <br />
 ### Use:
 Upon logging in, learners will be presented with the dashboard screen where they can select the language they wish to practice, the language they speak, and broadcoast the request live to the main or specific language channels. Other learners will see the request and if they speak the language you desire and wants to learn your language, they can join for an instant video chat session. 
 Next to the video chat will be a chat box window that will allow learners to type as well as correct each other's grammar. 
+
+### Web chat demo:
+[Demo](https://webrtc-linguage-qdvruywwki.now.sh/)
+Current usage until website is complete: <br/>
+1. Create a chatroom
+2. Send link to another user
+3. Other user needs to input the same chat room name
+4. Connect
 
 ### Build: 
 React, JavaScript, Material-UI, CSS3, Node.js, Python, Express, PostgreSQL, Knex, WebRTC 
