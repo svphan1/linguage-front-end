@@ -7,7 +7,7 @@ Upon logging in, learners will be presented with the dashboard screen where they
 Next to the video chat will be a chat box window that will allow learners to type as well as correct each other's grammar. 
 
 ### Web chat demo:
-[Demo](https://webrtc-linguage-qdvruywwki.now.sh/)
+[Demo](https://webrtc-linguage-qdvruywwki.now.sh/) <br/>
 Current usage until website is complete: <br/>
 1. Create a chatroom
 2. Send link to another user
